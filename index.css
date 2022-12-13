@@ -62,12 +62,13 @@
     box-shadow: 4px 4px 14px -2px rgba(0,0,0,0.75);
 }
 
-@media  screen and (max-width:769px) {
+@media  screen and (max-width:768px) {
     .activity-container{
         flex-direction: column;
     }
     .activity-column {
-        width: 80vh;
+        /* Pour éviter le problème de largeur, il faut réduire à 70% */
+        width: 70vh;
         height: 480px;
         margin-left: auto;
         margin-right: auto;
