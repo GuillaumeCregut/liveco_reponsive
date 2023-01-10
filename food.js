@@ -7,20 +7,17 @@ grillsLike.addEventListener('click',()=>{
 //function de calcul
 const calculPrice=(price,qtty,element)=>{
     let total=price*qtty;
-    element.innerHTML=total;
+    const spanPrice=document.getElementById(element);
+    spanPrice.innerHTML=total;
 }
-const grillQuantitySelector=document.getElementById('grills-qtty');
-const displayGrillPrice=document.getElementById('grills-price');
-const grillPrice=20;
-grillQuantitySelector.addEventListener('change',()=>{
-    const qtty=grillQuantitySelector.value;
-    calculPrice(grillPrice,qtty,displayGrillPrice);
-})
-
-const fishQuantitySelector=document.getElementById('fish-qtty');
-const displayFishPrice=document.getElementById('fish-price');
-const fishPrice=15;
-fishQuantitySelector.addEventListener('change',()=>{
-    const qtty=fishQuantitySelector.value;
-    calculPrice(fishPrice,qtty,displayFishPrice);
-})
+//Assigne les eventListener à chaque menu déroulant
+//Dans le fichier HTML, j'ai rajouter des data-span et data-price dans les sélecteurs
+const selectors=document.querySelectorAll('select');  //on récupère tous les select du document
+for(const selector of selectors){
+    selector.addEventListener('change',()=>{
+        const price=selector.dataset.price;
+        const element=selector.dataset.span;
+        const qtty=selector.value;
+        calculPrice(price,qtty,element);
+    });
+}
