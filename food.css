@@ -1,0 +1,47 @@
+.selected-page{
+    text-decoration: underline;
+}
+
+.title-restaurant{
+    text-align: center; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container-food{
+    display: flex;
+    padding-left: 20px;
+}
+
+.restaurant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin : 20px;
+}
+
+.img-food{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.like-container{
+    width: 30px;
+    height: 30px;
+    border : 1px solid black;
+}
+
+.dislike{
+    background: no-repeat center/80% url("https://cdn-icons-png.flaticon.com/512/1077/1077086.png");
+}
+
+.like{
+    background: no-repeat center/80% url("https://cdn-icons-png.flaticon.com/512/2107/2107845.png");
+}
+
+@media screen and (max-width :768px){
+    .container-food{
+        flex-direction: column;
+    }
+}
