@@ -1,8 +1,11 @@
-//récupération dans le dom du div "like"
-const grillsLike=document.getElementById('grills-like');
-grillsLike.addEventListener('click',()=>{
-    grillsLike.classList.toggle('like');
-})
+//refactoring code pour les likes
+const foodsLike=document.getElementsByClassName('like-container');
+for(const foodLike of foodsLike){
+    foodLike.addEventListener('click',()=>{
+        foodLike.classList.toggle('like');
+    })
+}
+
 
 //function de calcul
 const calculPrice=(price,qtty,element)=>{
