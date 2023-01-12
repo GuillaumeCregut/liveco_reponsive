@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="animals.css">
+    <title>Nos animaux</title>
+</head>
+
+<body>
+    <header class="home-header">
+        <h1 class='home-main-title'>Bienvenue a Superland, le parc d'attraction trop trop rigolo !</h1>
+    </header>
+    <nav>
+        <div class="nav-logo-container">
+            <a href="index.html">
+                <img class="nav-logo"
+                    src="https://sandiegozoowildlifealliance.org/themes/custom/park_stable/images/sdzwa-green.svg"
+                    alt="navbar logo">
+            </a>
+        </div>
+        <div class="navlink-container">
+            <input type="checkbox" class="toggle-btn">
+            <div class="burger-menu"></div>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="selected-page"><a href="#">Animaux</a></li>
+                <li><a href="./food.html">Boutique</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h2 class="page-title">Nos animaux</h2>
+        <section class="animals-container" id="animals-container">
+        </section>
+        <section class="admin-section">
+            <h3>Administration</h3>
+            <form action="#" method="get" class="form-add">
+                <label for="animal_name">
+                    Nom de l'animal :
+                    <input type="text" name="name" id="animal_name">
+                </label>
+                <label for="animal_picture">
+                    Photo de l'animal :
+                    <input type="text" name="picture" id="animal_picture">
+                </label>
+                <label for="description">description :<br /><textarea id="description"></textarea></label>
+                <div class="btn-form-container">
+                    <input type="submit" value="Ajouter" class="btn-submit">
+                    <input type="submit" value="Modifier" class="btn-submit" id="modify-btn">
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="animalList.js"></script>
+    <script src="animals.js"></script>
+</body>
+
+</html>

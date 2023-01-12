@@ -1,0 +1,146 @@
+.page-title{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.animal-picture{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/*Container */
+.animals-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/*flip card */
+.flip-card{
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    border: 1px solid black;
+}
+
+.flip-card-inner{
+    position : relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition:  transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front{
+    background-color: #bbb;
+    color : black;
+}
+
+.flip-card-back{
+    background-color: #2980b9;
+    color : white;
+    transform: rotateY(180deg);
+}
+
+.admin-section {
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.admin-section>h3,.admin-section>h4 {
+    text-align: center;
+}
+/* Formulaire */
+.form-add{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+
+.form-add>label{
+    margin-top: 10px;
+}
+
+.btn-submit{
+    width: 100px;
+}
+
+.animal-name{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.form-add{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height : 150px;
+    margin-bottom: 20px;
+}
+
+#animal_picture{
+    width: 50%;
+}
+
+textarea{
+    width: 80%;
+    height: 80px;
+    padding-left: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-form-container{
+    display: flex;
+    width: 20vw;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .animals-container{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .flip-card{
+        margin-bottom: 50px;
+    }
+
+    .form-add{
+        height: 250px;
+    }
+
+    .btn-form-container{
+        flex-direction: column;
+        height: 50px;
+    }
+    
+    #animal_picture{
+        width: 90%;
+    }
+}
